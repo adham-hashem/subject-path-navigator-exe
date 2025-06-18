@@ -1,0 +1,228 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #1f2937;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #1f2937;
+  color: #f4f4f9;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+body.dark .card {
+  background-color: #374151;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+body.dark h1 {
+  color: #f4f4f9;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+body.dark .theme-toggle {
+  color: #f4f4f9;
+}
+
+/* Input */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+body.dark input[type="text"] {
+  background-color: #4b5563;
+  border-color: #6b7280;
+  color: #f4f4f9;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 16px;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1e3a8a;
+}
+
+.btn-create {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.btn-create:hover {
+  background-color: #15803d;
+}
+
+.btn-update {
+  background-color: #d97706;
+  color: #ffffff;
+}
+
+.btn-update:hover {
+  background-color: #b45309;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background-color: #b91c1c;
+}
+
+/* Selected path */
+.selected-path {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+body.dark .selected-path {
+  color: #9ca3af;
+}
+
+/* Folder list */
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 24px;
+  color: #1f2937;
+}
+
+body.dark h2 {
+  color: #f4f4f9;
+}
+
+.folder-list {
+  margin-top: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+body.dark .folder-list {
+  background-color: #4b5563;
+}
+
+.folder-item {
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-item:hover {
+  background-color: #f59e0b;
+  color: #1f2937;
+}
+
+body.dark .folder-item {
+  background-color: #6b7280;
+}
+
+body.dark .folder-item:hover {
+  background-color: #f59e0b;
+  color: #1f2937;
+}
+
+.folder-item span:last-child {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Message */
+.message {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.message.success {
+  color: #16a34a;
+}
+
+.message.error {
+  color: #dc2626;
+}

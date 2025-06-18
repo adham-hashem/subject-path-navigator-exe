@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject Navigator</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h1>Subject Navigator</h1>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
+    <div class="form-group">
+      <input id="subjectInput" type="text" placeholder="Enter subject name">
+      <button id="selectFolderBtn" class="btn btn-primary">Select Base Folder</button>
+      <p id="selectedPath" class="selected-path"></p>
+    </div>
+    <div class="button-group">
+      <button id="createBtn" class="btn btn-create"><i class="fas fa-plus"></i> Create</button>
+      <button id="updateBtn" class="btn btn-update"><i class="fas fa-edit"></i> Update</button>
+      <button id="deleteBtn" class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+    <div class="folder-section">
+      <h2>Saved Folders</h2>
+      <ul id="folderList" class="folder-list"></ul>
+    </div>
+    <div id="message" class="message"></div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="js/renderer.js"></script>
+</body>
+</html>
